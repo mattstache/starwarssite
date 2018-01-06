@@ -1,0 +1,2 @@
+# web: npm run builddev
+api: nodemon server

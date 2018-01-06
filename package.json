@@ -4,17 +4,32 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nf start --procfile Procfile.dev",
+    "builddev": "webpack -d --config webpack.dev.js && webpack-dev-server --content-base src/ --inline --hot --port 3000 --history-api-fallback --config webpack.dev.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "body-parser": "^1.18.2",
+    "dotenv": "^4.0.0",
+    "es6-promise": "^4.2.2",
     "express": "^4.16.2",
     "foreman": "^2.0.0",
     "mongojs": "^2.4.1",
     "mongoose": "^5.0.0-rc2",
-    "react": "^16.2.0",
-    "webpack": "^3.10.0"
+    "piranhax": "^1.0.9",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router": "^4.1.2",
+    "react-router-dom": "^4.1.2",
+    "webpack": "^3.10.0",
+    "webpack-merge": "^4.1.1"
   },
   "devDependencies": {
     "webpack-dev-server": "^2.9.7"
