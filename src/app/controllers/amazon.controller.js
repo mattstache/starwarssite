@@ -4,6 +4,34 @@ const _ = require("lodash");
 const Piranhax = require("piranhax");
 const client = new Piranhax(process.env.AWS_ACCESS_KEY_ID, process.env.AMAZON_SECRET_KEY, process.env.AMAZON_ASSOCIATE_TAG);
 
+
+/* schema setup
+customer:
+  -cart id
+
+cart:
+  -product
+
+product
+  ASIN
+  name
+  price
+  amazon_url
+  -tags
+  -categories
+
+tags
+
+categories
+
+
+
+
+*/
+
+
+
+
 var searchResult = {
   Item: {
     ASIN: '',
@@ -48,7 +76,8 @@ var product = {
   featured: '',
   createdDate: '',
   productType: '',
-  tagIDs: [],
+  tags: [],
+  categories: [],
   images: {
     small:{
       url: '',
